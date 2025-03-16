@@ -68,11 +68,12 @@ Agentic Coding should be a collaboration between Human System Design and Agent I
 
 
 5. **Implementation**: Implement the initial nodes and flows based on the design.
+   - 🎉 If you’ve reached this step, humans have finished the design. Now *Agentic Coding* begins!
    - **“Keep it simple, stupid!”** Avoid complex features and full-scale type checking.
    - **FAIL FAST**! Avoid `try` logic so you can quickly identify any weak points in the system.
    - Add logging throughout the code to facilitate debugging.
 
-6. **Optimization**:
+7. **Optimization**:
    - **Use Intuition**: For a quick initial evaluation, human intuition is often a good start.
    - **Redesign Flow (Back to Step 3)**: Consider breaking down tasks further, introducing agentic decisions, or better managing input contexts.
    - If your flow design is already solid, move on to micro-optimizations:
@@ -84,7 +85,7 @@ Agentic Coding should be a collaboration between Human System Design and Agent I
      > <div align="center"><img src="https://github.com/the-pocket/PocketFlow/raw/main/assets/success.png?raw=true" width="400"/></div>
      {: .best-practice }
 
-7. **Reliability**  
+8. **Reliability**  
    - **Node Retries**: Add checks in the node `exec` to ensure outputs meet requirements, and consider increasing `max_retries` and `wait` times.
    - **Logging and Visualization**: Maintain logs of all attempts and visualize node results for easier debugging.
    - **Self-Evaluation**: Add a separate node (powered by an LLM) to review outputs when results are uncertain.

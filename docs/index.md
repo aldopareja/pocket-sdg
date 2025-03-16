@@ -8,11 +8,9 @@ nav_order: 1
 
 A [100-line](https://github.com/the-pocket/PocketFlow/blob/main/pocketflow/__init__.py) minimalist LLM framework for *Agents, Task Decomposition, RAG, etc*.
 
-
-- **Expressive**: Everything you love from larger frameworks—([Multi-](./design_pattern/multi_agent.html))[Agents](./design_pattern/agent.html), [Workflow](./design_pattern/workflow.html), [RAG](./design_pattern/rag.html), and more.  
 - **Lightweight**: Just the core graph abstraction in 100 lines. ZERO dependencies, and vendor lock-in.
-- **Principled**: Built with modularity and clear separation of concerns at its heart.
-- **AI-Friendly**: Intuitive enough for AI agents to assist humans in building complex LLM applications.
+- **Expressive**: Everything you love from larger frameworks—([Multi-](./design_pattern/multi_agent.html))[Agents](./design_pattern/agent.html), [Workflow](./design_pattern/workflow.html), [RAG](./design_pattern/rag.html), and more.  
+- **Agentic-Coding**: Intuitive enough for AI agents to help humans build complex LLM applications.
 
 <div align="center">
   <img src="https://github.com/the-pocket/PocketFlow/raw/main/assets/meme.jpg?raw=true" width="400"/>
@@ -30,6 +28,10 @@ We model the LLM workflow as a **Graph + Shared Store**:
 - [(Advanced) Async](./core_abstraction/async.md) nodes/flows allow waiting for asynchronous tasks.
 - [(Advanced) Parallel](./core_abstraction/parallel.md) nodes/flows handle I/O-bound tasks.
 
+<div align="center">
+  <img src="https://github.com/the-pocket/PocketFlow/raw/main/assets/abstraction.png" width="500"/>
+</div>
+
 ## Design Pattern
 
 From there, it’s easy to implement popular design patterns:
@@ -40,6 +42,10 @@ From there, it’s easy to implement popular design patterns:
 - [Map Reduce](./design_pattern/mapreduce.md) splits data tasks into Map and Reduce steps.
 - [Structured Output](./design_pattern/structure.md) formats outputs consistently.
 - [(Advanced) Multi-Agents](./design_pattern/multi_agent.md) coordinate multiple agents.
+
+<div align="center">
+  <img src="https://github.com/the-pocket/PocketFlow/raw/main/assets/design.png" width="500"/>
+</div>
 
 ## Utility Function
 

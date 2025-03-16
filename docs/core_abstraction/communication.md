@@ -14,15 +14,15 @@ Nodes and Flows **communicate** in 2 ways:
    - A global data structure (often an in-mem dict) that all nodes can read ( `prep()`) and write (`post()`).  
    - Great for data results, large content, or anything multiple nodes need.
    - You shall design the data structure and populate it ahead.
+     
+   - > **Separation of Concerns:** Use `Shared Store` for almost all cases to separate *Data Schema* from *Compute Logic*!  This approach is both flexible and easy to manage, resulting in more maintainable code. `Params` is more a syntax sugar for [Batch](./batch.md).
+     {: .best-practice }
 
 2. **Params (only for [Batch](./batch.md))** 
    - Each node has a local, ephemeral `params` dict passed in by the **parent Flow**, used as an identifier for tasks. Parameter keys and values shall be **immutable**.
    - Good for identifiers like filenames or numeric IDs, in Batch mode.
 
 If you know memory management, think of the **Shared Store** like a **heap** (shared by all function calls), and **Params** like a **stack** (assigned by the caller).
-
-> **Separation of Concerns:** Use `Shared Store` for almost all cases to separate *Data Schema* from *Compute Logic*!  This approach is both flexible and easy to manage, resulting in more maintainable code. `Params` is more a syntax sugar for [Batch](./batch.md).
-{: .best-practice }
 
 ---
 
