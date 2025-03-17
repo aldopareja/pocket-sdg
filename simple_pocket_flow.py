@@ -52,8 +52,10 @@ class AsyncFlow(AsyncNode):
     async def _orch_async(self, shared):
         curr  = copy.copy(self.start)
         while curr:
-            c = await curr._run_async(shared)
+            print(type(curr))
+            c, shared = await curr._run_async(shared)
             curr = copy.copy(self.get_next_node(curr, c))
+        return shared
 
     async def _run_async(self, shared):
         return await self._orch_async(shared)
